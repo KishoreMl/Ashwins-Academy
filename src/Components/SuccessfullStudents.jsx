@@ -1,3 +1,9 @@
+import Abi from '../assets/Students/Abi.jpeg';
+import Ashwin from '../assets/Students/Ashwin.jpeg';
+import Dee from '../assets/Students/Dee.jpeg';
+import Prav from '../assets/Students/Prav.jpeg';
+
+
 const SuccessfullStudents = () => {
 
     return (
@@ -6,30 +12,42 @@ const SuccessfullStudents = () => {
               <div class="students-list">
                 <div class="student-item">
                   <div class="student-avatar">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Hardik" />
+                    <img src={Ashwin} alt="Ashwin" />
                   </div>
-                  <span class="student-name">Hardik Mud</span>
+                  <div class="student-info">
+                    <span class="student-name">Ashwin Chinnambalam</span>
+                    <p class="college-name">TU Dresden</p>
+                  </div>
                 </div>
 
                 <div class="student-item">
                   <div class="student-avatar">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b73d7e5b?w=40&h=40&fit=crop&crop=face" alt="Hridya" />
+                    <img src={Dee} alt="Deetchith" />
                   </div>
-                  <span class="student-name">Hridya Ranj</span>
+                  <div class="student-info">
+                    <span class="student-name">Deetchith Kanna Ramadevan</span>
+                    <p class="college-name">TU Chemnitz</p>
+                  </div>
                 </div>
 
                 <div class="student-item">
                   <div class="student-avatar">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Jibin" />
+                    <img src={Abi} alt="Abhiee" />
                   </div>
-                  <span class="student-name">Jibin Thom</span>
+                  <div class="student-info">
+                    <span class="student-name">Abhiee Priethiev Senthil Kumar</span>
+                    <p class="college-name">TU Chemnitz</p>
+                  </div>
                 </div>
 
                 <div class="student-item">
                   <div class="student-avatar">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Poornima" />
+                    <img src={Prav} alt="Praveen" />
                   </div>
-                  <span class="student-name">Poornima M</span>
+                  <div class="student-info">
+                    <span class="student-name">Praveen Velmurugan</span>
+                    <p class="college-name">Bauhaus University Weimar</p>
+                  </div>
                 </div>
               </div>
             </div>

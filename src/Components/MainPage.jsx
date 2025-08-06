@@ -1,3 +1,9 @@
+import { youtubeChannel } from '../utils/constants';
+
+const handleSecondaryButtonClick = () => {
+    window.open(youtubeChannel, "_blank");
+};  
+
 const MainPage = () => {
     return (
 
@@ -16,7 +22,7 @@ const MainPage = () => {
             
             <div class="hero-buttons">
               <button class="primary-button">Free Profile Evaluation</button>
-              <button class="secondary-button">Watch Video</button>
+              <button class="secondary-button" onClick={handleSecondaryButtonClick}>Watch Video</button>
             </div>
           </div>
         </div>

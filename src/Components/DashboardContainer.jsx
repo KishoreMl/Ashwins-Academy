@@ -1,5 +1,5 @@
 import NewVisitors from './NewVisitors';
-import EnrolledStudents from './EnrolledStudents';
+import DescriptionCard from './DescriptionCard';
 import TopUniversities from './TopUniversities';
 import SuccessfullStudents from './SuccessfullStudents';
 
@@ -9,7 +9,7 @@ const DashboardContainer = () => {
             <div class="container">
                 <div class="dashboard-grid">
                     <NewVisitors />
-                    <EnrolledStudents />
+                    <DescriptionCard />
                     <TopUniversities />
                     <SuccessfullStudents />        
                 </div>

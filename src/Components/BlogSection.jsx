@@ -1,3 +1,8 @@
+import { coursesLink } from '../utils/constants';
+
+const handleClick = () => {
+    window.open(coursesLink, "_blank");
+  };
 const BlogSection = () => {
     return (
         <div class="container">
@@ -6,7 +11,9 @@ const BlogSection = () => {
             <div class="blog-section">
             <div class="section-header">
                 <h2>Study in Germany</h2>
-                <button class="view-all-btn">View All →</button>
+                <div class="university-search-button">
+                    <button class="primary-button view-all-btn" onClick={handleClick}>International Programmes in Germany</button>
+                </div>
             </div>
             
             <div class="blog-grid">
@@ -34,29 +41,6 @@ const BlogSection = () => {
                 </div>
                 </article>
 
-                <article class="blog-card question-card">
-                <div class="question-icon">?</div>
-                <div class="blog-content">
-                    <span class="blog-date">Jun 12, 2023</span>
-                    <h3>Study in Germany: Frequently Asked Questions - Answered</h3>
-                </div>
-                </article>
-
-                <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop" alt="Money" class="blog-image" />
-                <div class="blog-content">
-                    <span class="blog-date">Jun 11, 2023</span>
-                    <h3>How Much Does it Cost to Study in Germany</h3>
-                </div>
-                </article>
-
-                <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=200&fit=crop" alt="Study desk" class="blog-image" />
-                <div class="blog-content">
-                    <span class="blog-date">Jun 6, 2023</span>
-                    <h3>Studying in Germany vs. USA - A Comprehensive Comparison</h3>
-                </div>
-                </article>
             </div>
             </div>
         </div>

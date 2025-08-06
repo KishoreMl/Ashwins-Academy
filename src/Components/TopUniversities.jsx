@@ -1,4 +1,7 @@
-
+import TUM from '../assets/TUM.png';
+import RWTH from '../assets/RWTH.png';
+import TUD from '../assets/TUD.png';
+import Sttutgart from '../assets/Sttutgart.png';
 
 const TopUniversities = () => {
 
@@ -8,7 +11,9 @@ const TopUniversities = () => {
               <div class="universities-list">
                 <div class="university-item">
                   <div class="university-logo">
-                    <div class="logo-circle tum">TUM</div>
+                    <div class="logo-circle">
+                        <img src={TUM} alt="TUM" />
+                    </div>
                   </div>
                   <div class="university-info">
                     <div class="university-name">Technical University of Munich</div>
@@ -21,7 +26,9 @@ const TopUniversities = () => {
 
                 <div class="university-item">
                   <div class="university-logo">
-                    <div class="logo-circle tud">TU</div>
+                    <div class="logo-circle">
+                     <img src={RWTH} alt="RWTH" />
+                    </div>
                   </div>
                   <div class="university-info">
                     <div class="university-name">RWTH Aachen Universty</div>
@@ -33,7 +40,9 @@ const TopUniversities = () => {
 
                 <div class="university-item">
                   <div class="university-logo">
-                    <div class="logo-circle uom">🎓</div>
+                    <div class="logo-circle">
+                        <img src={TUD} alt="TUM" />
+                    </div>
                   </div>
                   <div class="university-info">
                     <div class="university-name">TU Dresden</div>
@@ -45,7 +54,9 @@ const TopUniversities = () => {
 
                 <div class="university-item">
                   <div class="university-logo">
-                    <div class="logo-circle fub">📘</div>
+                    <div class="logo-circle">
+                        <img src={Sttutgart} alt="TUM" />
+                    </div>
                   </div>
                   <div class="university-info">
                     <div class="university-name">University of Stuttgart</div>
