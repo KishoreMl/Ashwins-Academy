@@ -1,12 +1,13 @@
 {
-  "name": "solid-website",
-  "version": "0.0.1",
-  "description": "A Solid.js static website",
+  "name": "ashwins-academy",
+  "version": "1.0.0",
+  "description": "Ashwin's Academy - Study Abroad Platform",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "vite": "^5.0.0",

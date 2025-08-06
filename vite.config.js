@@ -5,7 +5,11 @@ export default defineConfig({
   plugins: [solid()],
   build: {
     target: 'esnext',
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: true,
   },
-  // Uncomment the line below if deploying to GitHub Pages or subfolder
-  // base: '/your-repo-name/',
+  // Uncomment and modify for GitHub Pages deployment
+  // base: '/repository-name/',
 });
