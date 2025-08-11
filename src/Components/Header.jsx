@@ -1,4 +1,3 @@
-import { createSignal } from 'solid-js';
 import companyLogo from '../assets/Company_Logo.png';
 import { coursesLink } from '../utils/constants';
 
@@ -6,16 +5,7 @@ const handleCoursesClick = () => {
     window.open(coursesLink, "_blank");
 };
 
-const Header = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = createSignal(false);
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen());
-    };
-
-    const closeMobileMenu = () => {
-        setIsMobileMenuOpen(false);
-    };
+const Header = (props) => {
 
     return (
         <header class="header">
@@ -34,17 +24,15 @@ const Header = () => {
                     <div class="dropdown">
                         <a href="#services">Services</a>
                     </div>
-  
                     <a href="#blog">About Us</a>
+                    <a onClick={props.openModal}>Call me back</a>
                 </nav>
                 
                 <div class="header-actions">
-                    <button class="cta-button desktop-cta">Call me back</button>
-                    
                     {/* Mobile Menu Button */}
                     <button 
-                        class={`mobile-menu-btn ${isMobileMenuOpen() ? 'active' : ''}`}
-                        onClick={toggleMobileMenu}
+                        class={`mobile-menu-btn ${props.isMobileMenuOpen ? 'active' : ''}`}
+                        onClick={props.toggleMobileMenu}
                         aria-label="Toggle mobile menu"
                     >
                         <span></span>
@@ -53,31 +41,6 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-
-            {/* Mobile Menu Overlay */}
-            <div class={`mobile-menu-overlay ${isMobileMenuOpen() ? 'active' : ''}`} onClick={closeMobileMenu}></div>
-            
-            {/* Mobile Side Menu */}
-            <nav class={`mobile-menu ${isMobileMenuOpen() ? 'active' : ''}`}>
-                <div class="mobile-menu-header">
-                    <div class="mobile-logo">
-                    </div>
-                    <button class="mobile-menu-close" onClick={closeMobileMenu} aria-label="Close menu">
-                        ×
-                    </button>
-                </div>
-                
-                <div class="mobile-menu-content">
-                    <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
-                    <a href="#courses" onClick={closeMobileMenu}>Courses</a>
-                    <a href="#services" onClick={closeMobileMenu}>Services</a>
-                    <a href="#partner" onClick={closeMobileMenu}>Partner Services</a>
-                    <a href="#tools" onClick={closeMobileMenu}>Tools</a>
-                    <a href="#blog" onClick={closeMobileMenu}>Blog</a>
-                    
-                    <button class="mobile-cta-button" onClick={closeMobileMenu}>Call me back</button>
-                </div>
-            </nav>
         </header>
     )
 }

@@ -1,8 +1,37 @@
 import { coursesLink } from '../utils/constants';
+import Blog1 from '../assets/blog1.jpg';
+import Blog2 from '../assets/blog2.jpg';
+import Blog3 from '../assets/blog3.jpg';
 
-const handleClick = () => {
+const handleBlogClick = (link) => {
+    window.open(link, "_blank");
+  };
+
+const handleCoursesClick = () => {
     window.open(coursesLink, "_blank");
   };
+
+const blogs = [
+    {
+        title:"21 Reasons Why to Study in Germany",
+        link:"https://www.cbs.de/en/blog/why-study-in-germany",
+        src:Blog1,
+        date:"Jun 16, 2025"
+    },
+    {
+        title:"Studying in Germany",
+        link:"https://www.daad.in/en/study-research-in-germany/studying-in-germany/",
+        src:Blog2,
+        date:"Feb 7, 2025"
+    },
+    {
+        title:"Reasons for studying in Germany",
+        link:"https://www.expatrio.com/about-germany/reasons-studying-germany",
+        src:Blog3,
+        date:"Aug 13, 2024"
+    },
+]
+
 const BlogSection = () => {
     return (
         <div class="container">
@@ -12,39 +41,25 @@ const BlogSection = () => {
             <div class="section-header">
                 <h2>Study in Germany</h2>
                 <div class="university-search-button">
-                    <button class="primary-button view-all-btn" onClick={handleClick}>International Programmes in Germany</button>
+                    <button class="primary-button view-all-btn" onClick={handleCoursesClick}>International Programmes in Germany</button>
                 </div>
             </div>
             
             <div class="blog-grid">
-                <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=300&h=200&fit=crop" alt="University building" class="blog-image" />
-                <div class="blog-content">
-                    <span class="blog-date">Jun 16, 2023</span>
-                    <h3>Top Private Universities in Germany for International Students</h3>
-                </div>
-                </article>
-
-                <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300&h=200&fit=crop" alt="Students" class="blog-image" />
-                <div class="blog-content">
-                    <span class="blog-date">Jun 15, 2023</span>
-                    <h3>Top 10 Universities for Winter Intake in Germany</h3>
-                </div>
-                </article>
-
-                <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Beach scene" class="blog-image" />
-                <div class="blog-content">
-                    <span class="blog-date">Jun 13, 2023</span>
-                    <h3>Summer vs. Winter Intake for MS in Germany: Choose the Perfect Study Abroad Intake for You</h3>
-                </div>
-                </article>
+                {blogs.map((blog) => (
+                    <article class="blog-card" onClick={() => handleBlogClick(blog.link)}>
+                        <img src={blog.src} alt={blog.title} class="blog-image" />
+                        <div class="blog-content">
+                            <span class="blog-date">{blog.date}</span>
+                            <h3>{blog.title}</h3>
+                        </div>
+                    </article>
+                ))}
+                </div>  
 
             </div>
             </div>
         </div>
-      </div>
     )
 }
 
