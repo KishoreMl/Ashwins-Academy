@@ -1,12 +1,10 @@
-import companyLogo from '../assets/Company_Logo.png';
-import { coursesLink } from '../utils/constants';
+import companyLogo from '../../assets/Company_Logo.png';
+import { coursesLink } from '../../utils/constants';
 
 const handleCoursesClick = () => {
     window.open(coursesLink, "_blank");
 };
-
 const Header = (props) => {
-
     return (
         <header class="header">
             <div class="container">
@@ -24,7 +22,7 @@ const Header = (props) => {
                     <div class="dropdown">
                         <a href="#services">Services</a>
                     </div>
-                    <a href="#blog">About Us</a>
+                    <a href="#about">About Us</a>
                     <a onClick={props.openModal}>Call me back</a>
                 </nav>
                 

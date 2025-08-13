@@ -17,19 +17,43 @@ const PricingPage = () => {
                 },
                 {
                     allowed:true,
-                    description:'Application Support'
+                    description:'SOP Writing'
                 },
                 {
                     allowed:true,
-                    description:'Document Review'
+                    description:'LOR Writing'
                 },
                 {
                     allowed:true,
-                    description:'Email Support'
+                    description:'CV Preparation'
+                },
+                {
+                    allowed:false,
+                    description:'APS Application'
                 },
                 {
                     allowed:true,
-                    description:'Basic Profile Evaluation'
+                    description:'University Shortlisting',
+                },
+                {
+                    allowed:true,
+                    description:'University Applications',
+                },
+                {
+                    allowed:true,
+                    description:'Uni Assist fee - Upto 5 Applications'
+                },
+                {
+                    allowed:true,
+                    description:'Couriers Upto 2 Applications'
+                },
+                {
+                    allowed:true,
+                    description:'ECTS Form Filling'
+                },
+                {
+                    allowed:true,
+                    description:'Custom Questionnaires'
                 }
                 
             ],
@@ -52,24 +76,45 @@ const PricingPage = () => {
                 },
                 {
                     allowed:true,
-                    description:'Priority Support'
+                    description:'SOP Writing'
                 },
                 {
                     allowed:true,
-                    description:'Interview Preparation'
+                    description:'LOR Writing'
                 },
                 {
                     allowed:true,
-                    description:'Scholarship Guidance'
-                },
-                {
-                    allowed:true,
-                    description:'Visa Application Support'
+                    description:'CV Preparation'
                 },
                 {
                     allowed:false,
-                    description:'Pre-departure Briefing'
+                    description:'APS Application'
+                },
+                {
+                    allowed:true,
+                    description:'University Shortlisting',
+                },
+                {
+                    allowed:true,
+                    description:'University Applications',
+                },
+                {
+                    allowed: false,
+                    description: 'Uni Assist fee',
+                },
+                {
+                    allowed:false,
+                    description:'Couriers'
+                },
+                {
+                    allowed:true,
+                    description:'ECTS Form Filling'
+                },
+                {
+                    allowed:true,
+                    description:'Custom Questionnaires'
                 }
+
             ],
             buttonText: 'Enroll Now',
             buttonStyle: 'outline',
@@ -90,23 +135,43 @@ const PricingPage = () => {
                 },
                 {
                     allowed:true,
-                    description:'Unlimited Applications'
+                    description:'SOP Writing'
                 },
                 {
                     allowed:true,
-                    description:'24/7 Premium Support'
+                    description:'LOR Writing'
                 },
                 {
                     allowed:true,
-                    description:'Personal Counselor'
+                    description:'CV Preparation'
+                },      
+                {
+                    allowed:true,
+                    description:'APS Application'
                 },
                 {
                     allowed:true,
-                    description:'Post-arrival Support'
+                    description:'University Shortlisting',
                 },
                 {
                     allowed:true,
-                    description:'Career Guidance'
+                    description:'University Applications',
+                },
+                {
+                    allowed:true,
+                    description:'Uni Assist fee - Upto 5 Applications'
+                },
+                {
+                    allowed:true,
+                    description:'Couriers Upto 2 Applications'
+                },
+                {
+                    allowed:true,
+                    description:'ECTS Form Filling'
+                },
+                {
+                    allowed:true,
+                    description:'Custom Questionnaires'
                 }
             ],
             buttonText: 'Contact Us',

@@ -1,4 +1,4 @@
-import { youtubeChannel } from '../utils/constants';
+import { youtubeChannel } from '../../utils/constants';
 
 const handleSecondaryButtonClick = () => {
     window.open(youtubeChannel, "_blank");

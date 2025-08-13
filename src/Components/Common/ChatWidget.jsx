@@ -2,10 +2,8 @@ import WhatsappIcon from '../assets/Whatsapp_logo.png';
 
 const ChatWidget = () => {
     return (
-    <div class="chat-widget">
-        <div class="chat-content">
-         <img src={WhatsappIcon} alt="Whatsapp" />
-        </div>
+      <div class="chat-widget">
+        <img src={WhatsappIcon} alt="Whatsapp" />
       </div>
     )
 }

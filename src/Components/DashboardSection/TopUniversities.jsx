@@ -1,7 +1,7 @@
-import TUM from '../assets/TUM.png';
-import RWTH from '../assets/RWTH.png';
-import TUD from '../assets/TUD.png';
-import Sttutgart from '../assets/Sttutgart.png';
+import TUM from '../../assets/TUM.png';
+import RWTH from '../../assets/RWTH.png';
+import TUD from '../../assets/TUD.png';
+import Sttutgart from '../../assets/Sttutgart.png';
 
 const TopUniversities = () => {
 

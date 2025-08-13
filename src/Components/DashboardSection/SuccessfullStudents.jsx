@@ -1,7 +1,7 @@
-import Abi from '../assets/Students/Abi.jpeg';
-import Ashwin from '../assets/Students/Ashwin.jpeg';
-import Dee from '../assets/Students/Dee.jpeg';
-import Prav from '../assets/Students/Prav.jpeg';
+import Abi from '../../assets/Students/Abi.jpeg';
+import Ashwin from '../../assets/Students/Ashwin.jpeg';
+import Dee from '../../assets/Students/Dee.jpeg';
+import Prav from '../../assets/Students/Prav.jpeg';
 
 
 const SuccessfullStudents = () => {

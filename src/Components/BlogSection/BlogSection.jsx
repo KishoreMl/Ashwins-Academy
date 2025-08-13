@@ -1,7 +1,7 @@
-import { coursesLink } from '../utils/constants';
-import Blog1 from '../assets/blog1.jpg';
-import Blog2 from '../assets/blog2.jpg';
-import Blog3 from '../assets/blog3.jpg';
+import { coursesLink } from '../../utils/constants';
+import Blog1 from '../../assets/blog1.jpg';
+import Blog2 from '../../assets/blog2.jpg';
+import Blog3 from '../../assets/blog3.jpg';
 
 const handleBlogClick = (link) => {
     window.open(link, "_blank");

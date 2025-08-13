@@ -18,13 +18,11 @@ const CallMeBackModal = (props) => {
         e.preventDefault();
         const data = formData();
         
-        // Basic validation
         if (!data.name || !data.email || !data.phone) {
             alert('Please fill in all fields');
             return;
         }
         
-        console.log('Form submitted:', data);
         alert('Thank you! We will call you back soon.');
         
         // Reset form
