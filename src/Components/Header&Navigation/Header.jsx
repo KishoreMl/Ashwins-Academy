@@ -23,7 +23,7 @@ const Header = (props) => {
                         <a href="#services">Services</a>
                     </div>
                     <a href="#about">About Us</a>
-                    <a onClick={props.openModal}>Call me back</a>
+                    <a onClick={() => props.openModal("Call Me Back", "call")}>Call me back</a>
                 </nav>
                 
                 <div class="header-actions">

@@ -316,7 +316,7 @@
   justify-content: space-between;
   padding:0.6rem 2rem;
   border-bottom: 1px solid #e2e8f0;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+  background-color: var(--primary-color);
   border-radius: 16px 16px 0 0;
 }
 
@@ -391,6 +391,17 @@
   color: #94a3b8;
 }
 
+.modal-form input.invalid {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.modal-form input.invalid:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
 .form-actions {
   display: flex;
   gap: 15px;
@@ -425,13 +436,20 @@
   box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
 }
 
-.btn-submit:hover {
+.btn-submit:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(79, 195, 247, 0.4);
 }
 
-.btn-submit:active {
+.btn-submit:active:not(:disabled) {
   transform: translateY(0);
+}
+
+.btn-submit:disabled {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(156, 163, 175, 0.3);
 }
 
 /* Mobile Modal Styles */
@@ -1007,7 +1025,7 @@
 /* Pricing Page Styles */
 .pricing-page {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
   min-height: 100vh;
 }
 
@@ -1263,6 +1281,127 @@
   text-decoration: underline;
 }
 
+/* Services */
+.services {
+  padding: 80px 0;
+}
+
+.services-header h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.services-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 0 2rem;
+}
+
+.services-content-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.services-content-card > b {
+  display: block;
+  font-size: 18px;
+  color: #0f172a;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.services-content-card p {
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 280px;
+  max-width: 90vw;
+  z-index: 2000;
+}
+
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toast h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.toast p {
+  margin: 0;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+.toast.success { background: #0fd374; }
+.toast.error { background: #c52525; }
+.toast.info { background: #1e3a8a; }
+.toast.warning { background: #d3cd17; color: black;}
+
+@keyframes toast-slide-up {
+  from { transform: translate(-50%, 20px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 0.96; }
+}
+
+.toast.show {
+  animation: toast-slide-up 200ms ease-out;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .pricing-grid {
@@ -1448,6 +1587,11 @@
 }
 
 /* About Us Section */
+
+  
+.about-us{
+  padding-bottom: 80px;
+}
 
 .about-us-header{
   display: flex;
@@ -1775,7 +1919,7 @@
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
   align-items: start;
 }
@@ -2168,7 +2312,7 @@
   }
   
   .dashboard-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
   
@@ -2427,6 +2571,10 @@
   
   .chart-legend {
     gap: 6px;
+  }
+  .section-header{
+    display:block;
+    text-align: center;
   }
   
   /* Extra Small Enrolled Students */

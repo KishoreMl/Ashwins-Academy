@@ -6,18 +6,33 @@ const AboutUs = () => {
             </div>
             <div class="about-us-content">
             <p>
-                At Ashwin’s Academy, we are dedicated to guiding ambitious students on their journey to pursue master’s programs in Germany. 
-                Founded with a vision to bridge the gap between academic potential and international opportunities, 
-                we provide personalized guidance, expert counseling, and step-by-step support — from selecting the right university to securing your admission.
-            </p>
-            <br></br>    
-            <p>
-                Our services go beyond paperwork. We focus on helping students understand the German education system, prepare compelling applications, and make informed choices about courses and career paths.
-                With first-hand experience in navigating the admission process and a commitment to transparency, Ashwin’s Academy ensures you are well-prepared for your academic journey abroad.</p>
+            <b>🚀 Who We Are</b>
             <br></br>
-            <p>
-                We believe that every student’s dream is unique, and we strive to turn that dream into a well-planned reality. 
-                Whether you’re looking for academic advice, application assistance, or cultural readiness, Ashwin’s Academy is your trusted partner in building a successful future in Germany.
+            Ashwin’s Academy is your trusted partner in pursuing master’s programs in Germany. We combine first-hand experience with expert guidance to make your academic journey abroad seamless and stress-free.
+            <br></br>
+            <br></br>
+            <b>🎯 Our Mission</b>
+            <br></br>
+            To empower students with the right guidance, tools, and strategies to secure admissions in top German universities — without the confusion or guesswork.
+            <br></br>
+            <br></br>
+
+            
+            <b>🌍 Why Choose Us</b>
+            <br></br>
+            <br></br>
+            Personalized Guidance: Every student’s journey is unique, and so is our approach.
+            <br></br>
+            End-to-End Support: From SOPs to Visa — we’ve got you covered.
+            <br></br>
+            Transparent Process: No hidden steps, no surprises.
+
+
+            <br></br>
+            <br></br>
+            <b>📈 Our Promise</b>
+            <br></br>
+                We focus on delivering clarity, accuracy, and success at every stage of your admission process. With Ashwin’s Academy, you’re not just applying to universities — you’re building your future with confidence.
             </p>
             </div>
         </div>

@@ -24,7 +24,7 @@ const MobileMenu = (props) =>{
                 <a href="#services" onClick={props.onClose}>Services</a>
                 <a href="#blog" onClick={props.onClose}>About Us</a>
                 
-                <button class="mobile-cta-button" onClick={props.openModal}>Call me back</button>
+                <button class="mobile-cta-button" onClick={() => props.openModal("Call Me Back", "call")}>Call me back</button>
                 </div>
             </nav>
         </>

@@ -1,6 +1,6 @@
 import { createSignal, For } from 'solid-js';
 
-const PricingPage = () => {
+const PricingPage = (props) => {
     const [selectedPlan, setSelectedPlan] = createSignal('standard');
 
     const pricingPlans = [
@@ -58,7 +58,7 @@ const PricingPage = () => {
                 
             ],
             buttonText: 'Enroll Now',
-            buttonStyle: 'outline',
+            buttonStyle: 'filled',
             popular: false,
             gradient: 'linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%)',
             iconColor: '#4fc3f7'
@@ -117,7 +117,7 @@ const PricingPage = () => {
 
             ],
             buttonText: 'Enroll Now',
-            buttonStyle: 'outline',
+            buttonStyle: 'filled',
             popular: true,
             gradient: 'linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%)',
             iconColor: '#0277bd'
@@ -174,7 +174,7 @@ const PricingPage = () => {
                     description:'Custom Questionnaires'
                 }
             ],
-            buttonText: 'Contact Us',
+            buttonText: 'Enroll Now',
             buttonStyle: 'filled',
             popular: false,
             gradient: 'linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%)',
@@ -184,15 +184,6 @@ const PricingPage = () => {
 
     const handlePlanSelect = (planId) => {
         setSelectedPlan(planId);
-    };
-
-    const handleEnroll = (plan) => {
-        if (plan.buttonText === 'Contact Us') {
-            // Trigger modal or contact form
-            console.log('Opening contact form for:', plan.name);
-        } else {
-            console.log('Enrolling in plan:', plan.name);
-        }
     };
 
     return (
@@ -253,7 +244,7 @@ const PricingPage = () => {
                                         <p class="price-description">{plan.description}</p>
                                     </div>
 
-                                                                         <div class="features-list">
+                                    <div class="features-list">
                                          <For each={plan.features}>
                                              {(feature) => (
                                                  <div class={`feature-item ${!feature.allowed ? 'feature-disabled' : ''}`}>
@@ -277,7 +268,7 @@ const PricingPage = () => {
                                         class={`plan-button ${plan.buttonStyle}`}
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            handleEnroll(plan);
+                                            props.openModal("Enroll", "enroll-"+plan.id);
                                         }}
                                     >
                                         {plan.buttonText}
