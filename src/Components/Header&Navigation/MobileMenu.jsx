@@ -24,7 +24,7 @@ const MobileMenu = (props) =>{
                 
                 <div class="mobile-menu-content">
                 <a href="#pricing" onClick={props.onClose}>Pricing</a>
-                <a href={handleCoursesClick} onClick={props.onClose}>Courses</a>
+                <a href="#courses" onClick={handleCoursesClick}>Courses</a>
                 <a href="#services" onClick={props.onClose}>Services</a>
                 <a href="#about" onClick={props.onClose}>About Us</a>
                 
