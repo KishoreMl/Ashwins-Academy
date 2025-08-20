@@ -1283,7 +1283,7 @@
 
 /* Services */
 .services {
-  padding: 80px 0;
+  padding: 1rem 0;
 }
 
 .services-header h2 {
@@ -1296,7 +1296,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .services-content-card {
@@ -1601,7 +1601,7 @@
 }
 
 .about-us-content{
-  padding: 1rem 3rem;
+  padding: 1rem 1.7rem;
 }
 
 .about-us-content p{
