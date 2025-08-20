@@ -1,5 +1,9 @@
 import companyLogo from '../../assets/Company_Logo.png';
+import { coursesLink } from '../../utils/constants';
 
+const handleCoursesClick = () =>{
+    window.open(coursesLink,"_blank");
+}
 const MobileMenu = (props) =>{
     return(
         <>  
@@ -20,9 +24,9 @@ const MobileMenu = (props) =>{
                 
                 <div class="mobile-menu-content">
                 <a href="#pricing" onClick={props.onClose}>Pricing</a>
-                <a href="#courses" onClick={props.onClose}>Courses</a>
+                <a href={handleCoursesClick} onClick={props.onClose}>Courses</a>
                 <a href="#services" onClick={props.onClose}>Services</a>
-                <a href="#blog" onClick={props.onClose}>About Us</a>
+                <a href="#about" onClick={props.onClose}>About Us</a>
                 
                 <button class="mobile-cta-button" onClick={() => props.openModal("Call Me Back", "call")}>Call me back</button>
                 </div>
